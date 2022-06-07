@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import ProductDetail from './components/ProductDetail'
 import ProductListing from './components/ProductListing';
@@ -13,9 +13,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
+        <Route path='*' element ={<NotFound/>} />
         <Route path='/' element={<ProductListing/>} /> 
         <Route path="/product/:productId" element={<ProductDetail/>} />
-        <Route path='*' element ={<NotFound/>} />
       </Routes>
     </Router>
     </div>
