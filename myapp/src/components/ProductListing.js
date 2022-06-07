@@ -24,7 +24,7 @@ const ProductListing = () => {
     useEffect(() => {
         productFetcher()
     }, [])
-     console.log({products})
+    //  console.log({products})
   
 
 
